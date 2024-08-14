@@ -1,0 +1,49 @@
+
+.lienzo{
+    background-image: url('../imgs/grid.png');
+    background-size: cover;
+    background-position: center center;
+}
+#contenedorLienzo{
+    position: relative;
+    margin: 5vh auto;
+    /** Tamaño del canvas = tamaño contenedor-canvas ^*/
+    width: 1000px;
+    height: 500px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    overflow: hidden; /** evitar scroll*/
+}
+h1 {
+    text-align: center;
+}
+
+#contenedorButton button{
+    display: block;
+    position: relative;
+    margin: 5px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+#vertical{
+    display: none;
+}
+@media all and(orientation: portrait) {
+    #contenedorLienzo{
+        display: none;
+    }
+    #vertical{
+        display: block;
+        position: fixed;
+        width: 1000%;
+        height: 100vh;
+        z-index: 1;
+        background-image: url('../imgs/vertical.png');
+        background-size: cover;
+        background-position: center center;
+    }
+}
